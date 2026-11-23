@@ -174,7 +174,6 @@ struct FilesView: View {
                     }
                 }
                 .preferredColorScheme(.dark)
-            }
         }
         .sheet(isPresented: $newFileOpen) {
             NavigationStack {

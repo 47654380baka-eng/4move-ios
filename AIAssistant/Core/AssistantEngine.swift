@@ -160,7 +160,9 @@ final class AssistantEngine: ObservableObject {
         memory.appendTranscript(role: "user", content: text)
         lexicon.learn(from: text)
 
-        let payload = Array(messages.suffix(9))
+        let payload = Array(messages.suffix(9)).map {
+            ChatMessageDTO(role: $0.role, content: $0.content, images: $0.images)
+        }
         let system = HiddenPrompt.build(
             settings: settings.settings,
             memory: memory.text(),
@@ -470,13 +472,13 @@ final class AssistantEngine: ObservableObject {
             return true
         }
         if let value = arg(["файл запиши ", "запиши файл ", "write "]) {
-            let parts = value.components(separatedBy: "|", maxSplits: 1, omittingEmptySubsequences: false)
+            let parts = value.split(separator: "|", maxSplits: 1, omittingEmptySubsequences: false).map(String.init)
             guard parts.count == 2 else {
                 note("Формат: файл запиши <путь> | <текст>", .error)
                 return true
             }
             let target = parts[0].trimmingCharacters(in: .whitespacesAndNewlines)
-            let content = String(parts[1]).trimmingCharacters(in: .whitespacesAndNewlines)
+            let content = parts[1].trimmingCharacters(in: .whitespacesAndNewlines)
             runBridge("write", target, text: content, needConfirm: true)
             return true
         }

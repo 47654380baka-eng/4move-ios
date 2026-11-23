@@ -114,8 +114,8 @@ final class LexiconStore {
             .filter { $0.count >= 3 && $0.count <= 24 && !stopWords.contains($0) && !$0.allSatisfy({ $0.isNumber }) }
 
         for word in cleaned.prefix(24) {
-            if let existing = entries.first(where: { $0.word == word }) {
-                existing.count += 1
+            if let index = entries.firstIndex(where: { $0.word == word }) {
+                entries[index].count += 1
             } else {
                 entries.append(LexiconEntry(word: word, meaning: word, kind: "word", count: 1))
             }
@@ -127,9 +127,9 @@ final class LexiconStore {
     }
 
     private func add(_ word: String, meaning: String, kind: String) {
-        if let existing = entries.first(where: { $0.word.lowercased() == word.lowercased() }) {
-            existing.meaning = meaning
-            existing.count += 1
+        if let index = entries.firstIndex(where: { $0.word.lowercased() == word.lowercased() }) {
+            entries[index].meaning = meaning
+            entries[index].count += 1
         } else {
             entries.append(LexiconEntry(word: word, meaning: meaning, kind: kind, count: 1))
         }

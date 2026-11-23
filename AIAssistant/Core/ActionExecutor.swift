@@ -227,7 +227,7 @@ final class ActionExecutor {
         guard let engine else { return }
         do {
             let (tempURL, response) = try await URLSession.shared.download(from: url)
-            var name = response.suggestedFilename
+            var name = response.suggestedFilename ?? ""
             if name.isEmpty { name = url.lastPathComponent }
             if name.isEmpty { name = "4move-download" }
             let safe = (name as NSString).lastPathComponent

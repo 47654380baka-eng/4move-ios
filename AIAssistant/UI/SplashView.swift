@@ -18,49 +18,46 @@ struct SplashView: View {
             )
             .ignoresSafeArea()
 
-            TimelineView(.animation) { context in
-                let t = context.date.timeIntervalSince1970
-                GeometryReader { geo in
-                    let w = geo.size.width
-                    let h = geo.size.height
+            GeometryReader { geo in
+                let w = geo.size.width
+                let h = geo.size.height
 
-                    ZStack {
-                        ForEach(0..<48, id: \.self) { i in
-                            let x = pseudo(Float(i) * 1.73) * w
-                            let y = pseudo(Float(i) * 2.31) * h * 0.55
-                            let twinkle = 0.35 + 0.65 * abs(sin(Float(t) * 1.6 + Float(i)))
-                            Circle()
-                                .fill(Color.white.opacity(Double(twinkle) * 0.7))
-                                .frame(width: i % 7 == 0 ? 2 : 1, height: i % 7 == 0 ? 2 : 1)
-                                .position(x: x, y: y)
-                        }
-
+                ZStack {
+                    ForEach(0..<48, id: \.self) { i in
+                        let x = pseudo(Float(i) * 1.73) * w
+                        let y = pseudo(Float(i) * 2.31) * h * 0.55
+                        let twinkle = 0.35 + 0.65 * pseudo(Float(i) * 0.77)
                         Circle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color(red: 1.0, green: 0.88, blue: 0.42),
-                                        Color(red: 1.0, green: 0.17, blue: 0.55)
-                                    ],
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                                )
-                            )
-                            .frame(width: min(w, h) * 0.46, height: min(w, h) * 0.46)
-                            .position(x: w / 2, y: h * 0.42 + CGFloat(sin(t * 1.1) * 4))
-                            .shadow(color: Color(red: 1.0, green: 0.2, blue: 0.6).opacity(0.8), radius: 34)
-
-                        VStack(spacing: 0) {
-                            ForEach(0..<9, id: \.self) { row in
-                                Rectangle()
-                                    .fill(Color.cyan.opacity(0.22))
-                                    .frame(height: 1)
-                                    .scaleEffect(x: 1.4, y: 1, anchor: .center)
-                                    .offset(y: CGFloat(row) * CGFloat(6 + row * 3))
-                            }
-                        }
-                        .position(x: w / 2, y: h * 0.62)
+                            .fill(Color.white.opacity(Double(twinkle) * 0.7))
+                            .frame(width: i % 7 == 0 ? 2 : 1, height: i % 7 == 0 ? 2 : 1)
+                            .position(x: x, y: y)
                     }
+
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    Color(red: 1.0, green: 0.88, blue: 0.42),
+                                    Color(red: 1.0, green: 0.17, blue: 0.55)
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .frame(width: min(w, h) * 0.46, height: min(w, h) * 0.46)
+                        .position(x: w / 2, y: h * 0.42)
+                        .shadow(color: Color(red: 1.0, green: 0.2, blue: 0.6).opacity(0.8), radius: 34)
+
+                    VStack(spacing: 0) {
+                        ForEach(0..<9, id: \.self) { row in
+                            Rectangle()
+                                .fill(Color.cyan.opacity(0.22))
+                                .frame(height: 1)
+                                .scaleEffect(x: 1.4, y: 1, anchor: .center)
+                                .offset(y: CGFloat(row) * CGFloat(6 + row * 3))
+                        }
+                    }
+                    .position(x: w / 2, y: h * 0.62)
                 }
             }
 
