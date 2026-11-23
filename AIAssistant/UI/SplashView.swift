@@ -24,9 +24,9 @@ struct SplashView: View {
 
                 ZStack {
                     ForEach(0..<48, id: \.self) { i in
-                        let x = pseudo(Float(i) * 1.73) * w
-                        let y = pseudo(Float(i) * 2.31) * h * 0.55
-                        let twinkle = 0.35 + 0.65 * pseudo(Float(i) * 0.77)
+                        let x = CGFloat(pseudo(Float(i) * 1.73)) * w
+                        let y = CGFloat(pseudo(Float(i) * 2.31)) * h * 0.55
+                        let twinkle = CGFloat(0.35 + 0.65 * pseudo(Float(i) * 0.77))
                         Circle()
                             .fill(Color.white.opacity(Double(twinkle) * 0.7))
                             .frame(width: i % 7 == 0 ? 2 : 1, height: i % 7 == 0 ? 2 : 1)
