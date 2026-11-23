@@ -29,22 +29,22 @@
 
 /* Begin PBXFileReference section */
 		A2000000000000000000001 /* AIAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantApp.swift; sourceTree = "<group>"; };
-		A2000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A2000000000000000000003 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
-		A2000000000000000000004 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
-		A2000000000000000000005 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A2000000000000000000006 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		A2000000000000000000007 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		A2000000000000000000008 /* AssistantEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantEngine.swift; sourceTree = "<group>"; };
-		A2000000000000000000009 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		A200000000000000000000A /* HiddenPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenPrompt.swift; sourceTree = "<group>"; };
-		A200000000000000000000B /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		A200000000000000000000C /* MemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStore.swift; sourceTree = "<group>"; };
-		A200000000000000000000D /* LexiconStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconStore.swift; sourceTree = "<group>"; };
-		A200000000000000000000E /* OwnerGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerGuard.swift; sourceTree = "<group>"; };
-		A200000000000000000000F /* OllamaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaClient.swift; sourceTree = "<group>"; };
-		A2000000000000000000010 /* BridgeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeClient.swift; sourceTree = "<group>"; };
-		A2000000000000000000011 /* ActionExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExecutor.swift; sourceTree = "<group>"; };
+		A2000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/ContentView.swift; sourceTree = "<group>"; };
+		A2000000000000000000003 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/CodeView.swift; sourceTree = "<group>"; };
+		A2000000000000000000004 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/FilesView.swift; sourceTree = "<group>"; };
+		A2000000000000000000005 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/SettingsView.swift; sourceTree = "<group>"; };
+		A2000000000000000000006 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/Theme.swift; sourceTree = "<group>"; };
+		A2000000000000000000007 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI/SplashView.swift; sourceTree = "<group>"; };
+		A2000000000000000000008 /* AssistantEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/AssistantEngine.swift; sourceTree = "<group>"; };
+		A2000000000000000000009 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Models.swift; sourceTree = "<group>"; };
+		A200000000000000000000A /* HiddenPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/HiddenPrompt.swift; sourceTree = "<group>"; };
+		A200000000000000000000B /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Language.swift; sourceTree = "<group>"; };
+		A200000000000000000000C /* MemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/MemoryStore.swift; sourceTree = "<group>"; };
+		A200000000000000000000D /* LexiconStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/LexiconStore.swift; sourceTree = "<group>"; };
+		A200000000000000000000E /* OwnerGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/OwnerGuard.swift; sourceTree = "<group>"; };
+		A200000000000000000000F /* OllamaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/OllamaClient.swift; sourceTree = "<group>"; };
+		A2000000000000000000010 /* BridgeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/BridgeClient.swift; sourceTree = "<group>"; };
+		A2000000000000000000011 /* ActionExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/ActionExecutor.swift; sourceTree = "<group>"; };
 		A2000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
 		A2000000000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		A2000000000000000000015 /* 4MOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4MOVE.app; sourceTree = BUILT_PRODUCTS_DIR; };
